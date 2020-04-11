@@ -1,0 +1,180 @@
+// compress: true
+
+@import "fonts.css";
+@import "normalize.css";
+
+@primary-color: #419DE0;
+@white-color: #FFF;
+@text-color: #161326;
+@black-color: #000;
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  background-color: #FFF;
+  font-family: 'Proxima Nova';
+  font-weight: 400;
+  font-size: 16px;
+  color: @text-color;
+}
+
+.vkApp {
+  padding: 40px 15px 140px;
+  max-width: 1000px;
+  background: url(../img/svg/waves.svg) no-repeat bottom left;
+
+  &__button {
+    text-align: center;
+  }
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  outline: none;
+  user-select: none;
+  font-family: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.btn {
+  padding: 0 32px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  color: @white-color;
+  background: linear-gradient(96deg, #8BB8FA 0%, #60BCFF 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 8px 30px rgba(96, 188, 255, 0.2);
+  transition: border-color .3s, box-shadow .3s;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.50);
+    box-shadow: 0px 8px 30px rgba(96, 188, 255, 0.5);
+  }
+}
+
+.stages {
+  &__heading {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: 'Proxima Nova Condensed';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin: 10px auto 0;
+    max-width: 420px;
+    line-height: 24px;
+    color: #404555;
+  }
+
+  &__container {
+    max-width: 838px;
+    margin: 35px auto 0;
+  }
+
+  &__row {
+    margin: -17px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    padding: 17px;
+    box-sizing: border-box;
+    width: 25%;
+  }
+
+  &__button {
+    text-align: center;
+  }
+
+  &__btn-answers {
+    font-size: 18px;
+    line-height: 70px;
+  }
+}
+
+.stages-item {
+  padding: 22px;
+  display: block;
+  text-align: center;
+  background-color: #F8FBFF;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: transform .3s, border-color .3s;
+
+  &:hover {
+    border-color: #419DE0;
+    transform: translateY(-7px);
+  }
+
+  &__name {
+    margin-top: 15px;
+    color: @black-color;
+  }
+}
+
+@media (max-width: 767px) {
+  .stages {
+    &__container {
+      max-width: 402px;
+    }
+
+    &__col {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .stages {
+    &__container {
+      max-width: 185px;
+    }
+
+    &__row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__col {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
